@@ -1,8 +1,8 @@
-package leczner.jon.BankAccount;
+package leczner.jon.Bank;
 
 import java.util.ArrayList;
 
-import static leczner.jon.BankAccount.Enums.*;
+import static leczner.jon.Bank.Enums.*;
 
 /**
  * Created by jonathanleczner on 9/14/16.
@@ -25,13 +25,13 @@ public class BankAccount {
         balance = 0;
         switch (accountType) {
             case CHECKINGS:
-                interestRate = 0;
+                interestRate = Bank.checkingsInterestRate;
                 break;
             case SAVINGS:
-                interestRate = 0.01;
+                interestRate = Bank.savingsInterestRate;
                 break;
             case INVESTMENT:
-                interestRate = 1.05;
+                interestRate = Bank.investmentInterestRate;
                 break;
             default:
                 break;
@@ -73,8 +73,21 @@ public class BankAccount {
         return transactions;
     }
 
+
+
     public TransactionStatus processTransaction(double amount, TransactionType type) {
         return null;
+    }
+
+    public void addToTransactionList(Transaction trans) {transactions.add(trans);}
+
+    public void displayTransactionHistory() { return; }
+
+    public String balanceInquiry() {
+        if (accountStatus == AccountStatus.FROZEN)
+            return "ACCOUNT FROZEN: BALANCE INFORMATION CURRENTLY UNAVAILABLE";
+        else
+            return accountNumber + ": " + accountType + "\n" + "Current balance: " + balance;
     }
 
     public boolean closeAccount() {

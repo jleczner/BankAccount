@@ -1,4 +1,4 @@
-package leczner.jon.BankAccount;
+package leczner.jon.Bank;
 
 /**
  * Created by jonathanleczner on 9/14/16.

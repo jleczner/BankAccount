@@ -1,6 +1,6 @@
-package leczner.jon.BankAccount;
+package leczner.jon.Bank;
 
-import static leczner.jon.BankAccount.Enums.*;
+import static leczner.jon.Bank.Enums.*;
 
 /**
  * Created by jonathanleczner on 9/14/16.
