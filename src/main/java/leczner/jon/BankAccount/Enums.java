@@ -6,7 +6,7 @@ package leczner.jon.BankAccount;
 public class Enums {
     public enum AccountType {CHECKINGS, SAVINGS, INVESTMENT}
     public enum AccountStatus {OPEN, CLOSED, FROZEN}
-    public enum OverdraftProtection {ENABLED, DISABLED, AUTOTRANSFER}
+    public enum OverdraftPrevention {ENABLED, DISABLED, AUTOTRANSFER}
     public enum TransactionStatus {APPROVED, DENIED}
-    public enum TransactionType {DEBIT, CREDIT, TRANSFER}
+    public enum TransactionType {DEBIT, CREDIT, TRANSFER, STATUS_CHANGE, NAME_CHANGE, INTEREST_CHANGE}
 }
